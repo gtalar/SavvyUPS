@@ -18,6 +18,7 @@ namespace Savvy.API.Controllers
             _context = context;
 
         }
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetUsers()
         {
