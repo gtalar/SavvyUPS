@@ -1,13 +1,16 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-primary">
   <div class="container">
-      <a class="navbar-brand" href="#">Savvy</a>
+      <a class="navbar-brand" [routerLink]="['/home']">Savvy</a>
 
       <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Main</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/main']">Main</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Favorites</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/favorites']">Favorites</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/dbsetup']">DB Setup</a>
         </li>
       </ul>
     
